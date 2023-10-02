@@ -45,6 +45,5 @@ class Walker{
     } else {
       rect(this.posX, this.posY, 10, 10);
     }
-    
   }
 }
