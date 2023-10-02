@@ -6,9 +6,9 @@ let w4;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   w1 = new Walker(200, 200);
-  w2 = new Walker(200, 200);
-  w3 = new Walker(200, 200);
-  w4 = new Walker(200, 200);
+  w2 = new Walker(300, 400);
+  w3 = new Walker(400, 600);
+  w4 = new Walker(500, 800);
 }
 
 function draw() {
@@ -27,7 +27,9 @@ class Walker{
     this.posX = _posX;
     this.posY = _posY;
     this.vel = random(1, 10);
-    this.color = color(255, random(0,200), random(0, 200));
+    this.color = color(255, random(0, 200), random(0, 200));
+    
+    this.esCirculo = random() > 0.5 ? true : false;
   }
   
   update() {
@@ -38,6 +40,11 @@ class Walker{
   display() {
     fill(this.color);
     noStroke();
+    if (this.esCirculo) {
     circle(this.posX, this.posY, 10);
+    } else {
+      rect(this.posX, this.posY, 10, 10);
+    }
+    
   }
 }
