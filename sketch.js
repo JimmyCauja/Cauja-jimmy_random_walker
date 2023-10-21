@@ -5,6 +5,7 @@ let w4;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  background(250, 240, 230);
   w1 = new Walker(200, 200);
   w2 = new Walker(300, 400);
   w3 = new Walker(400, 600);
@@ -27,7 +28,7 @@ class Walker{
     this.posX = _posX;
     this.posY = _posY;
     this.vel = random(1, 10);
-    this.color = color(255, random(0, 200), random(0, 200));
+    this.color = color(255, random(0, 150), random(0, 210));
     
     this.esCirculo = random() > 0.5 ? true : false;
   }
